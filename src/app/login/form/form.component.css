@@ -1,3 +1,21 @@
+ul li{
+    list-style: none;
+}
+
+ul{
+    padding: 0;
+}
+
+input{
+    border: 0;
+    border-bottom: 2px solid black;
+    outline: none !important;
+}
+
+.alerta{
+    color:red;
+    font-size: 1rem;
+}
 .container{
     width: 500px;
 }

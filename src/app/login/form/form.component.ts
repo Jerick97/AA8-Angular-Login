@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  user : string = 'Angular';
-  password : string = '123456';
+  users : string = 'Angular';
+  passwords : string = '123456';
   nav : string[] = ['Home', 'Support', 'Contact'];
-  mostrar : boolean = true;
+  incorrecto : boolean = false;
   bienvenida : boolean = false;
   constructor() { }
 
@@ -17,10 +17,12 @@ export class FormComponent implements OnInit {
   }
 
   login(usuario:string,pass:string){
-    if((usuario === this.user) && (pass === this.password) ){
+    if((usuario === this.users) && (pass === this.passwords) ){
       this.bienvenida = true;
+      this.incorrecto = false;
     }else{
-      this.mostrar = false;
+      this.incorrecto = true;
+      this.bienvenida = false;
     }
   }
 }
